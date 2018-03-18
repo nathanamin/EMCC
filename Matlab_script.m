@@ -1,0 +1,50 @@
+%%% This is a comment
+
+%% This is a Section: '%%' Section 1: Variables
+
+a=3; e=7; z=11;
+b=4; f=8;
+c=5; g=9;
+d=6; h=10;
+
+%% This is an Array/Matrix
+
+%%% first instantiate it with zeros
+array=(zeros(3,3)); %%% Matlan counts from 1,2,3..., while python counts from 0,1,2,3.
+
+array %% to print an array or variable, simply write the variable without a semicolon
+
+%%assign specific values to the array
+
+array=[a,b,c;d,e,f;g,h,z];
+
+%% Run Function
+print_array(array,7,9)
+
+
+%% Function
+
+function new = print_array(array,some_value,length)
+    %% Check out the if/else statements, while loops, and for loops
+    new=zeros(size(array)); %%% Our output array
+    if (some_value > 4)
+        for i=1:length
+            new(i)=array(i)+1;
+        end
+    else
+        i=1;
+        while (i<length)
+            new(i)=array(i)*2;
+        end
+    end
+    
+    figure()
+    plot(new(1,:))
+    hold on
+    plot(array(1,:))
+    xlabel('xlabel');
+    ylabel('ylabel');
+    title('Title')
+    legend('new_array','old_array')
+    
+end

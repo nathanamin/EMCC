@@ -4,11 +4,6 @@ How to clone a respository:
 (If you don’t have an origin, then follow the next step)
 3. git remote add origin https://github.com/nathanamin/EMCC.git
 
-
-
-How to Pull:
-1.
-
 How to Push:
 1. git add .
 2. git commit -m “First Commit”
